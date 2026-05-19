@@ -70,3 +70,11 @@ Dat.bus. (bei 8-Bit-CPU -> 8b breit, 64-Bit-CPU -> 64b breit), jedes Byte bleibt
 
 TTL(Transistor-Transistor-Logic)=0/1<->0V/5V<br>
 Transistor=elektronisches Bauteil, das Leitungen dazwischen hat, erzeugt 0/1<br>
+
+### Auftrag 1
+1) 2*10^-3 mm, 0,002 mm
+2) 234*10^9 µl -> 234*10^9*10^-6 l -> 234'000 l
+3) 3.3 ZB -> 3.3*10^21-9 GB => 3.3*10^21-9/25 -AI-> 132*10^9 Blue-Ray-Discs
+4) PDF-Datei Vers. 1.7 (%PDF-1.7), es hat einige PDF-Strukturelemente
+  - Dateigrösse: 220 KB (225,776 bytes)
+  - Grösse auf Datenträger: 224 KB (229,376 bytes)
