@@ -71,10 +71,41 @@ Dat.bus. (bei 8-Bit-CPU -> 8b breit, 64-Bit-CPU -> 64b breit), jedes Byte bleibt
 TTL(Transistor-Transistor-Logic)=0/1<->0V/5V<br>
 Transistor=elektronisches Bauteil, das Leitungen dazwischen hat, erzeugt 0/1<br>
 
-### Auftrag 1
+### Aufgabe 1
 1) 2*10^-3 mm, 0,002 mm
 2) 234*10^9 µl -> 234*10^9*10^-6 l -> 234'000 l
 3) 3.3 ZB -> 3.3*10^21-9 GB => 3.3*10^21-9/25 -AI-> 132*10^9 Blue-Ray-Discs
 4) PDF-Datei Vers. 1.7 (%PDF-1.7), es hat einige PDF-Strukturelemente
   - Dateigrösse: 220 KB (225,776 bytes)
   - Grösse auf Datenträger: 224 KB (229,376 bytes)
+
+
+## Binäre Datenspeicher und ihre Grenzen
+**Anzahl Bit-Kombinationen ermitteln:** 2^x (x=anzahl Bit)<br>
+Anzahl Bit: Aufgerundet von (LOG y / LOG 2) (y=anzahl bKombinationen)<br>
+
+| Speicher- grösse | Anzahl Bit | Anzahl Kombinationen | Wertebereich **Unsigned** | Wertebereich **Signed** <br> MSB* &rarr; ±|
+|---|:---:|---|---|---|
+| BYTE | 8 | 2<sup>8</sup> = 256 | 0 bis <br> 255 (= 2<sup>8</sup>-1) | -128 bis +127 |
+| WORD | 16 | 2<sup>16</sup> = 65536 | 0 bis 65535 | -32'768 bis +32'767 |
+| DWORD | 32 | 2<sup>32</sup>  | 0 bis 4’294’967’296 | -2'147'483'648 bis +2'147'483'647 |
+| QWORD | 64 | 2<sup>64</sup> | 0 bis 2<sup>64</sup>-1 ≈ 1,70141·10<sup>38</sup> | -9'223'372'036'854'775'808 bis +9'223'372'036'854'775'807 |
+
+MSB (Most Significant Bit): versendung von links nach rechts<br>
+LSB (Least Significant BIt): Versendung von rechts nach links<br>
+<img width="710" height="1383" alt="image" src="https://github.com/user-attachments/assets/4ce54481-481d-46c0-83c9-5b455f4f20aa" /><br>
+(signed)<br>
+
+<img width="428" height="438" alt="image" src="https://github.com/user-attachments/assets/97553bce-d3e4-483e-9252-d81f77c2f169" /><br>
+(MSB=1 ist Vorzeichen "-", MSB=0 ist "+")<br>
+(Datenüberfluss error: Unsig. >255, Sig. <-128 & >127
+
+### Aufgabe 2
+1) 2^32 bKombinationen 1 DWORD
+2) min sig. WORD bin: 1000 0000 0000 0000 (hier vordestes bit vorzeichen/msb=1->"-"), dec: -32'768
+3) max unsig. WORD bin: 1111 1111 1111 1111, dec: 65'535
+4) 2^9 -> 512 bKombos
+5) 2^20 -> 1'048'576 bKombos
+6) 9 bStellen
+7) 100-(-100) = 200 -> 200*10+1 = 2001 bKombos -> Aufrunden(LOG 2001/Log 2) = 11 Bit
+8) WORD: <-32'768, >32,767, DWORD: <-2'147'483'648, >2,147,483,647
